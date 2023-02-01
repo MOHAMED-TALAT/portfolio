@@ -1,0 +1,90 @@
+.main {
+    color: white;
+    
+    overflow: hidden;
+
+    .col-md-5 {
+        margin-bottom: 300px;
+    }
+
+    .inf {
+        :nth-child(1),
+        :nth-child(2),
+        :nth-child(3) {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        :nth-child(1)::after {
+            content: "Hello.";
+            color: white;
+        }
+        
+        :nth-child(2)::after {
+            content: "I'm";
+            color: red;
+        }
+        
+        :nth-child(3)::after {
+            content: "Mohamed Talat";
+            color: red;
+        }
+
+        :nth-child(1)::after,
+        :nth-child(2)::after,
+        :nth-child(3)::after {
+            position: relative;
+        }
+
+
+        :nth-child(1):hover:after {
+            content: "about";
+        }
+
+        :nth-child(2):hover:after {
+            content: "work";
+        }
+
+        :nth-child(3):hover:after {
+            content: "contact";
+        }
+
+        :nth-child(1):hover:after,
+        :nth-child(2):hover:after,
+        :nth-child(3):hover:after {
+            position: relative;
+            animation: slidein 1s ease-in-out alternate infinite;
+        }
+    }
+
+    a {
+        display: block;
+        font-size: 4rem;
+    }
+}
+
+
+// Animation
+@keyframes slidein {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        .col-md-5 {
+            margin-bottom: 15%;
+            margin-top: 10%;
+        }
+        .col-md-7 {
+            margin-top: 4%;
+        }
+        a{
+            font-size: 3rem;}
+    }
+}

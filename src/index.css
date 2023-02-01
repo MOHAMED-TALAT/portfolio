@@ -1,0 +1,7 @@
+@tailwind utilities;
+* {
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=index.css.map */

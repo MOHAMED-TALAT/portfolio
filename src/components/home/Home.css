@@ -1,0 +1,93 @@
+.main {
+  color: white;
+  overflow: hidden;
+}
+
+.main .col-md-5 {
+  margin-bottom: 300px;
+}
+
+.main .inf :nth-child(1),
+.main .inf :nth-child(2),
+.main .inf :nth-child(3) {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.main .inf :nth-child(1)::after {
+  content: "Hello.";
+  color: white;
+}
+
+.main .inf :nth-child(2)::after {
+  content: "I'm";
+  color: red;
+}
+
+.main .inf :nth-child(3)::after {
+  content: "Mohamed Talat";
+  color: red;
+}
+
+.main .inf :nth-child(1)::after,
+.main .inf :nth-child(2)::after,
+.main .inf :nth-child(3)::after {
+  position: relative;
+}
+
+.main .inf :nth-child(1):hover:after {
+  content: "about";
+}
+
+.main .inf :nth-child(2):hover:after {
+  content: "work";
+}
+
+.main .inf :nth-child(3):hover:after {
+  content: "contact";
+}
+
+.main .inf :nth-child(1):hover:after,
+.main .inf :nth-child(2):hover:after,
+.main .inf :nth-child(3):hover:after {
+  position: relative;
+  -webkit-animation: slidein 1s ease-in-out alternate infinite;
+          animation: slidein 1s ease-in-out alternate infinite;
+}
+
+.main a {
+  display: block;
+  font-size: 4rem;
+}
+
+@-webkit-keyframes slidein {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 80px;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main .col-md-5 {
+    margin-bottom: 15%;
+    margin-top: 10%;
+  }
+  .main .col-md-7 {
+    margin-top: 4%;
+  }
+  .main a {
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=Home.css.map */
